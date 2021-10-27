@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# WaverPad - A simple soundboard made in PascalABC.NET
 
-You can use the [editor on GitHub](https://github.com/MichaelAgarkov/WaverPad/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+MicSetup is a very lightweight installation builder, made from scratch in PascalABC.NET by [Michael Agarkov](https://github.com/MichaelAgarkov).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![Screenshot_1](https://user-images.githubusercontent.com/81249219/139078314-1ac53f01-5950-4b79-8bff-d60dda1fe4e5.png)
 
-### Markdown
+You can read the [wiki](https://github.com/MichaelAgarkov/WaverPad/wiki) to find more info about this project.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Download WaverPad
 
-```markdown
-Syntax highlighted code block
+- [Releases](https://github.com/MichaelAgarkov/WaverPad/releases)
+- [Source code](https://github.com/MichaelAgarkov/WaverPad)
 
-# Header 1
-## Header 2
-### Header 3
+### Compiler for the source code
+I recommend using [PascalABC.NET version 3.4.2 build 2050](https://archive.org/download/pascalabc.net/PascalABCNETWithDotNetSetup.exe) because it's the version WaverPad is compiled in.
 
-- Bulleted
-- List
+## WaverPad License
+WaverPad is published under the [**BSD 4-Clause License**](https://github.com/MichaelAgarkov/WaverPad/blob/main/License.txt) for your freedom to [modify](https://github.com/MichaelAgarkov/WaverPad/wiki/Modifying) the program for your needs.
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MichaelAgarkov/WaverPad/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+---
+Copyright (c) 2021, [Michael Agarkov](https://github.com/MichaelAgarkov)
+<br>
+All rights reserved.
