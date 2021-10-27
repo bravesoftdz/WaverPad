@@ -30,7 +30,6 @@ type
     button3: Button;
     components: System.ComponentModel.IContainer;
     label1: &Label;
-    maskedTextBox1: MaskedTextBox;
     label2: &Label;
     openFileDialog1: OpenFileDialog;
     playSelectedSoundToolStripMenuItem: ToolStripMenuItem;
@@ -38,6 +37,10 @@ type
     addAFileToolStripMenuItem: ToolStripMenuItem;
     removeToolStripMenuItem: ToolStripMenuItem;
     groupBox2: GroupBox;
+    numericUpDown1: NumericUpDown;
+    numericUpDown2: NumericUpDown;
+    label3: &Label;
+    label4: &Label;
     menuStrip1: MenuStrip;
     {$include Unit1.Form1.inc}
   {$endregion FormDesigner}
@@ -63,9 +66,12 @@ end;
 procedure Form1.button3_Click(sender: Object; e: EventArgs);
 begin
   var SoundboardPlayer := new System.Windows.Media.MediaPlayer;
-  SoundboardPlayer.Open(new System.Uri(listBox1.SelectedItem.ToString, System.UriKind.Relative));
-  SoundboardPlayer.Play();
-  sleep((maskedTextBox1.Text + '000').ToInteger);
+  var i: integer;
+  for i := 1 to numericUpDown2.Value.ToString.ToInteger do begin
+    SoundboardPlayer.Open(new System.Uri(listBox1.SelectedItem.ToString, System.UriKind.Relative));
+    SoundboardPlayer.Play();
+    sleep((numericUpDown1.Value.ToString + '000').ToInteger);
+  end;
   SoundboardPlayer.Close();
 end;
 
@@ -103,9 +109,12 @@ end;
 procedure Form1.playSelectedSoundToolStripMenuItem_Click(sender: Object; e: EventArgs);
 begin
   var SoundboardPlayer := new System.Windows.Media.MediaPlayer;
-  SoundboardPlayer.Open(new System.Uri(listBox1.SelectedItem.ToString, System.UriKind.Relative));
-  SoundboardPlayer.Play();
-  sleep((maskedTextBox1.Text + '000').ToInteger);
+  var i: integer;
+  for i := 1 to numericUpDown2.Value.ToString.ToInteger do begin
+    SoundboardPlayer.Open(new System.Uri(listBox1.SelectedItem.ToString, System.UriKind.Relative));
+    SoundboardPlayer.Play();
+    sleep((numericUpDown1.Value.ToString + '000').ToInteger);
+  end;
   SoundboardPlayer.Close();
 end;
 

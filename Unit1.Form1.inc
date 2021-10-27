@@ -3,24 +3,29 @@ procedure InitializeComponent;
         var resources: System.ComponentModel.ComponentResourceManager := new System.ComponentModel.ComponentResourceManager(typeof(Form1));
         self.menuStrip1 := new System.Windows.Forms.MenuStrip();
         self.soundboardToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
-        self.aboutToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
-        self.listBox1 := new System.Windows.Forms.ListBox();
-        self.groupBox1 := new System.Windows.Forms.GroupBox();
-        self.button1 := new System.Windows.Forms.Button();
-        self.button2 := new System.Windows.Forms.Button();
-        self.button3 := new System.Windows.Forms.Button();
-        self.label1 := new System.Windows.Forms.Label();
-        self.maskedTextBox1 := new System.Windows.Forms.MaskedTextBox();
-        self.label2 := new System.Windows.Forms.Label();
-        self.openFileDialog1 := new System.Windows.Forms.OpenFileDialog();
         self.playSelectedSoundToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
         self.toolStripSeparator1 := new System.Windows.Forms.ToolStripSeparator();
         self.addAFileToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
         self.removeToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
+        self.aboutToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
+        self.listBox1 := new System.Windows.Forms.ListBox();
+        self.groupBox1 := new System.Windows.Forms.GroupBox();
+        self.button2 := new System.Windows.Forms.Button();
+        self.button1 := new System.Windows.Forms.Button();
+        self.button3 := new System.Windows.Forms.Button();
+        self.label1 := new System.Windows.Forms.Label();
+        self.label2 := new System.Windows.Forms.Label();
+        self.openFileDialog1 := new System.Windows.Forms.OpenFileDialog();
         self.groupBox2 := new System.Windows.Forms.GroupBox();
+        self.numericUpDown2 := new System.Windows.Forms.NumericUpDown();
+        self.label3 := new System.Windows.Forms.Label();
+        self.label4 := new System.Windows.Forms.Label();
+        self.numericUpDown1 := new System.Windows.Forms.NumericUpDown();
         self.menuStrip1.SuspendLayout();
         self.groupBox1.SuspendLayout();
         self.groupBox2.SuspendLayout();
+        (System.ComponentModel.ISupportInitialize(self.numericUpDown2)).BeginInit();
+        (System.ComponentModel.ISupportInitialize(self.numericUpDown1)).BeginInit();
         self.SuspendLayout();
         // 
         // menuStrip1
@@ -43,6 +48,40 @@ procedure InitializeComponent;
         self.soundboardToolStripMenuItem.Size := new System.Drawing.Size(100, 20);
         self.soundboardToolStripMenuItem.Text := 'Soundboard';
         // 
+        // playSelectedSoundToolStripMenuItem
+        // 
+        self.playSelectedSoundToolStripMenuItem.Enabled := false;
+        self.playSelectedSoundToolStripMenuItem.Image := (System.Drawing.Image(resources.GetObject('playSelectedSoundToolStripMenuItem.Image')));
+        self.playSelectedSoundToolStripMenuItem.Name := 'playSelectedSoundToolStripMenuItem';
+        self.playSelectedSoundToolStripMenuItem.ShortcutKeys := (System.Windows.Forms.Keys((System.Windows.Forms.Keys.Control or System.Windows.Forms.Keys.P)));
+        self.playSelectedSoundToolStripMenuItem.Size := new System.Drawing.Size(219, 22);
+        self.playSelectedSoundToolStripMenuItem.Text := 'Play selected sound';
+        self.playSelectedSoundToolStripMenuItem.Click += playSelectedSoundToolStripMenuItem_Click;
+        // 
+        // toolStripSeparator1
+        // 
+        self.toolStripSeparator1.Name := 'toolStripSeparator1';
+        self.toolStripSeparator1.Size := new System.Drawing.Size(216, 6);
+        // 
+        // addAFileToolStripMenuItem
+        // 
+        self.addAFileToolStripMenuItem.Image := (System.Drawing.Image(resources.GetObject('addAFileToolStripMenuItem.Image')));
+        self.addAFileToolStripMenuItem.Name := 'addAFileToolStripMenuItem';
+        self.addAFileToolStripMenuItem.ShortcutKeys := (System.Windows.Forms.Keys((System.Windows.Forms.Keys.Control or System.Windows.Forms.Keys.O)));
+        self.addAFileToolStripMenuItem.Size := new System.Drawing.Size(219, 22);
+        self.addAFileToolStripMenuItem.Text := 'Add a file';
+        self.addAFileToolStripMenuItem.Click += addAFileToolStripMenuItem_Click;
+        // 
+        // removeToolStripMenuItem
+        // 
+        self.removeToolStripMenuItem.Enabled := false;
+        self.removeToolStripMenuItem.Image := (System.Drawing.Image(resources.GetObject('removeToolStripMenuItem.Image')));
+        self.removeToolStripMenuItem.Name := 'removeToolStripMenuItem';
+        self.removeToolStripMenuItem.ShortcutKeys := System.Windows.Forms.Keys.Delete;
+        self.removeToolStripMenuItem.Size := new System.Drawing.Size(219, 22);
+        self.removeToolStripMenuItem.Text := 'Remove';
+        self.removeToolStripMenuItem.Click += removeToolStripMenuItem_Click;
+        // 
         // aboutToolStripMenuItem
         // 
         self.aboutToolStripMenuItem.ForeColor := System.Drawing.Color.White;
@@ -55,6 +94,7 @@ procedure InitializeComponent;
         // listBox1
         // 
         self.listBox1.FormattingEnabled := true;
+        self.listBox1.HorizontalScrollbar := true;
         self.listBox1.Location := new System.Drawing.Point(12, 36);
         self.listBox1.Name := 'listBox1';
         self.listBox1.Size := new System.Drawing.Size(160, 225);
@@ -72,16 +112,6 @@ procedure InitializeComponent;
         self.groupBox1.TabStop := false;
         self.groupBox1.Text := 'Files';
         // 
-        // button1
-        // 
-        self.button1.Location := new System.Drawing.Point(6, 19);
-        self.button1.Name := 'button1';
-        self.button1.Size := new System.Drawing.Size(91, 23);
-        self.button1.TabIndex := 0;
-        self.button1.Text := 'Add a file';
-        self.button1.UseVisualStyleBackColor := true;
-        self.button1.Click += button1_Click;
-        // 
         // button2
         // 
         self.button2.Enabled := false;
@@ -92,6 +122,16 @@ procedure InitializeComponent;
         self.button2.Text := 'Remove';
         self.button2.UseVisualStyleBackColor := true;
         self.button2.Click += button2_Click;
+        // 
+        // button1
+        // 
+        self.button1.Location := new System.Drawing.Point(6, 19);
+        self.button1.Name := 'button1';
+        self.button1.Size := new System.Drawing.Size(91, 23);
+        self.button1.TabIndex := 0;
+        self.button1.Text := 'Add a file';
+        self.button1.UseVisualStyleBackColor := true;
+        self.button1.Click += button1_Click;
         // 
         // button3
         // 
@@ -112,18 +152,9 @@ procedure InitializeComponent;
         self.label1.TabIndex := 4;
         self.label1.Text := 'Play sound for:';
         // 
-        // maskedTextBox1
-        // 
-        self.maskedTextBox1.Location := new System.Drawing.Point(85, 19);
-        self.maskedTextBox1.Mask := '#';
-        self.maskedTextBox1.Name := 'maskedTextBox1';
-        self.maskedTextBox1.Size := new System.Drawing.Size(12, 20);
-        self.maskedTextBox1.TabIndex := 5;
-        self.maskedTextBox1.Text := '3';
-        // 
         // label2
         // 
-        self.label2.Location := new System.Drawing.Point(99, 22);
+        self.label2.Location := new System.Drawing.Point(117, 22);
         self.label2.Name := 'label2';
         self.label2.Size := new System.Drawing.Size(47, 13);
         self.label2.TabIndex := 6;
@@ -137,51 +168,56 @@ procedure InitializeComponent;
         self.openFileDialog1.Title := 'Select an audio file';
         self.openFileDialog1.FileOk += openFileDialog1_FileOk;
         // 
-        // playSelectedSoundToolStripMenuItem
-        // 
-        self.playSelectedSoundToolStripMenuItem.Enabled := false;
-        self.playSelectedSoundToolStripMenuItem.Image := (System.Drawing.Image(resources.GetObject('playSelectedSoundToolStripMenuItem.Image')));
-        self.playSelectedSoundToolStripMenuItem.Name := 'playSelectedSoundToolStripMenuItem';
-        self.playSelectedSoundToolStripMenuItem.ShortcutKeys := (System.Windows.Forms.Keys((System.Windows.Forms.Keys.Control or System.Windows.Forms.Keys.H)));
-        self.playSelectedSoundToolStripMenuItem.Size := new System.Drawing.Size(221, 22);
-        self.playSelectedSoundToolStripMenuItem.Text := 'Play selected sound';
-        self.playSelectedSoundToolStripMenuItem.Click += playSelectedSoundToolStripMenuItem_Click;
-        // 
-        // toolStripSeparator1
-        // 
-        self.toolStripSeparator1.Name := 'toolStripSeparator1';
-        self.toolStripSeparator1.Size := new System.Drawing.Size(218, 6);
-        // 
-        // addAFileToolStripMenuItem
-        // 
-        self.addAFileToolStripMenuItem.Image := (System.Drawing.Image(resources.GetObject('addAFileToolStripMenuItem.Image')));
-        self.addAFileToolStripMenuItem.Name := 'addAFileToolStripMenuItem';
-        self.addAFileToolStripMenuItem.ShortcutKeys := (System.Windows.Forms.Keys((System.Windows.Forms.Keys.Control or System.Windows.Forms.Keys.O)));
-        self.addAFileToolStripMenuItem.Size := new System.Drawing.Size(221, 22);
-        self.addAFileToolStripMenuItem.Text := 'Add a file';
-        self.addAFileToolStripMenuItem.Click += addAFileToolStripMenuItem_Click;
-        // 
-        // removeToolStripMenuItem
-        // 
-        self.removeToolStripMenuItem.Enabled := false;
-        self.removeToolStripMenuItem.Image := (System.Drawing.Image(resources.GetObject('removeToolStripMenuItem.Image')));
-        self.removeToolStripMenuItem.Name := 'removeToolStripMenuItem';
-        self.removeToolStripMenuItem.ShortcutKeys := System.Windows.Forms.Keys.Delete;
-        self.removeToolStripMenuItem.Size := new System.Drawing.Size(221, 22);
-        self.removeToolStripMenuItem.Text := 'Remove';
-        self.removeToolStripMenuItem.Click += removeToolStripMenuItem_Click;
-        // 
         // groupBox2
         // 
+        self.groupBox2.Controls.Add(self.numericUpDown2);
+        self.groupBox2.Controls.Add(self.label3);
+        self.groupBox2.Controls.Add(self.label4);
+        self.groupBox2.Controls.Add(self.numericUpDown1);
         self.groupBox2.Controls.Add(self.label1);
         self.groupBox2.Controls.Add(self.label2);
-        self.groupBox2.Controls.Add(self.maskedTextBox1);
         self.groupBox2.Location := new System.Drawing.Point(178, 90);
         self.groupBox2.Name := 'groupBox2';
         self.groupBox2.Size := new System.Drawing.Size(200, 135);
         self.groupBox2.TabIndex := 3;
         self.groupBox2.TabStop := false;
         self.groupBox2.Text := 'Settings';
+        // 
+        // numericUpDown2
+        // 
+        self.numericUpDown2.Location := new System.Drawing.Point(85, 45);
+        self.numericUpDown2.Maximum := new System.Decimal(new System.Int32[4](9, 0, 0, 0));
+        self.numericUpDown2.Minimum := new System.Decimal(new System.Int32[4](1, 0, 0, 0));
+        self.numericUpDown2.Name := 'numericUpDown2';
+        self.numericUpDown2.Size := new System.Drawing.Size(30, 20);
+        self.numericUpDown2.TabIndex := 13;
+        self.numericUpDown2.Value := new System.Decimal(new System.Int32[4](1, 0, 0, 0));
+        // 
+        // label3
+        // 
+        self.label3.Location := new System.Drawing.Point(6, 48);
+        self.label3.Name := 'label3';
+        self.label3.Size := new System.Drawing.Size(77, 13);
+        self.label3.TabIndex := 11;
+        self.label3.Text := 'Repeat sound:';
+        // 
+        // label4
+        // 
+        self.label4.Location := new System.Drawing.Point(117, 48);
+        self.label4.Name := 'label4';
+        self.label4.Size := new System.Drawing.Size(31, 13);
+        self.label4.TabIndex := 12;
+        self.label4.Text := 'times';
+        // 
+        // numericUpDown1
+        // 
+        self.numericUpDown1.Location := new System.Drawing.Point(85, 19);
+        self.numericUpDown1.Maximum := new System.Decimal(new System.Int32[4](9, 0, 0, 0));
+        self.numericUpDown1.Minimum := new System.Decimal(new System.Int32[4](1, 0, 0, 0));
+        self.numericUpDown1.Name := 'numericUpDown1';
+        self.numericUpDown1.Size := new System.Drawing.Size(30, 20);
+        self.numericUpDown1.TabIndex := 10;
+        self.numericUpDown1.Value := new System.Decimal(new System.Int32[4](3, 0, 0, 0));
         // 
         // Form1
         // 
@@ -203,7 +239,8 @@ procedure InitializeComponent;
         self.menuStrip1.PerformLayout();
         self.groupBox1.ResumeLayout(false);
         self.groupBox2.ResumeLayout(false);
-        self.groupBox2.PerformLayout();
+        (System.ComponentModel.ISupportInitialize(self.numericUpDown2)).EndInit();
+        (System.ComponentModel.ISupportInitialize(self.numericUpDown1)).EndInit();
         self.ResumeLayout(false);
         self.PerformLayout();
     end;
