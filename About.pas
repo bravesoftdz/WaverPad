@@ -1,4 +1,4 @@
-﻿Unit About;
+﻿unit About;
 
 interface
 
@@ -8,7 +8,7 @@ type
   AboutForm = class(Form)
     procedure linkLabel1_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
   {$region FormDesigner}
-  private
+  private 
     {$resource About.AboutForm.resources}
     linkLabel1: LinkLabel;
     tabControl1: TabControl;
@@ -17,7 +17,7 @@ type
     pictureBox1: PictureBox;
     {$include About.AboutForm.inc}
   {$endregion FormDesigner}
-  public
+  public 
     constructor;
     begin
       InitializeComponent;
