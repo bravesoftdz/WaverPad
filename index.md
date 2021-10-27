@@ -1,6 +1,6 @@
 # WaverPad - A simple soundboard made in PascalABC.NET
 
-MicSetup is a very lightweight installation builder, made from scratch in PascalABC.NET by [Michael Agarkov](https://github.com/MichaelAgarkov).
+WaverPad is a very lightweight soundboard program, made from scratch in PascalABC.NET by [Michael Agarkov](https://github.com/MichaelAgarkov).
 
 ![Screenshot_1](https://user-images.githubusercontent.com/81249219/139078314-1ac53f01-5950-4b79-8bff-d60dda1fe4e5.png)
 
