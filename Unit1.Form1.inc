@@ -13,19 +13,9 @@ procedure InitializeComponent;
         self.button2 := new System.Windows.Forms.Button();
         self.button1 := new System.Windows.Forms.Button();
         self.button3 := new System.Windows.Forms.Button();
-        self.label1 := new System.Windows.Forms.Label();
-        self.label2 := new System.Windows.Forms.Label();
         self.openFileDialog1 := new System.Windows.Forms.OpenFileDialog();
-        self.groupBox2 := new System.Windows.Forms.GroupBox();
-        self.numericUpDown2 := new System.Windows.Forms.NumericUpDown();
-        self.label3 := new System.Windows.Forms.Label();
-        self.label4 := new System.Windows.Forms.Label();
-        self.numericUpDown1 := new System.Windows.Forms.NumericUpDown();
         self.menuStrip1.SuspendLayout();
         self.groupBox1.SuspendLayout();
-        self.groupBox2.SuspendLayout();
-        (System.ComponentModel.ISupportInitialize(self.numericUpDown2)).BeginInit();
-        (System.ComponentModel.ISupportInitialize(self.numericUpDown1)).BeginInit();
         self.SuspendLayout();
         // 
         // menuStrip1
@@ -144,22 +134,6 @@ procedure InitializeComponent;
         self.button3.UseVisualStyleBackColor := true;
         self.button3.Click += button3_Click;
         // 
-        // label1
-        // 
-        self.label1.Location := new System.Drawing.Point(6, 22);
-        self.label1.Name := 'label1';
-        self.label1.Size := new System.Drawing.Size(77, 13);
-        self.label1.TabIndex := 4;
-        self.label1.Text := 'Play sound for:';
-        // 
-        // label2
-        // 
-        self.label2.Location := new System.Drawing.Point(117, 22);
-        self.label2.Name := 'label2';
-        self.label2.Size := new System.Drawing.Size(47, 13);
-        self.label2.TabIndex := 6;
-        self.label2.Text := 'seconds';
-        // 
         // openFileDialog1
         // 
         self.openFileDialog1.DefaultExt := 'wav';
@@ -168,61 +142,9 @@ procedure InitializeComponent;
         self.openFileDialog1.Title := 'Select an audio file';
         self.openFileDialog1.FileOk += openFileDialog1_FileOk;
         // 
-        // groupBox2
-        // 
-        self.groupBox2.Controls.Add(self.numericUpDown2);
-        self.groupBox2.Controls.Add(self.label3);
-        self.groupBox2.Controls.Add(self.label4);
-        self.groupBox2.Controls.Add(self.numericUpDown1);
-        self.groupBox2.Controls.Add(self.label1);
-        self.groupBox2.Controls.Add(self.label2);
-        self.groupBox2.Location := new System.Drawing.Point(178, 90);
-        self.groupBox2.Name := 'groupBox2';
-        self.groupBox2.Size := new System.Drawing.Size(200, 135);
-        self.groupBox2.TabIndex := 3;
-        self.groupBox2.TabStop := false;
-        self.groupBox2.Text := 'Settings';
-        // 
-        // numericUpDown2
-        // 
-        self.numericUpDown2.Location := new System.Drawing.Point(85, 45);
-        self.numericUpDown2.Maximum := new System.Decimal(new System.Int32[4](9, 0, 0, 0));
-        self.numericUpDown2.Minimum := new System.Decimal(new System.Int32[4](1, 0, 0, 0));
-        self.numericUpDown2.Name := 'numericUpDown2';
-        self.numericUpDown2.Size := new System.Drawing.Size(30, 20);
-        self.numericUpDown2.TabIndex := 13;
-        self.numericUpDown2.Value := new System.Decimal(new System.Int32[4](1, 0, 0, 0));
-        // 
-        // label3
-        // 
-        self.label3.Location := new System.Drawing.Point(6, 48);
-        self.label3.Name := 'label3';
-        self.label3.Size := new System.Drawing.Size(77, 13);
-        self.label3.TabIndex := 11;
-        self.label3.Text := 'Repeat sound:';
-        // 
-        // label4
-        // 
-        self.label4.Location := new System.Drawing.Point(117, 48);
-        self.label4.Name := 'label4';
-        self.label4.Size := new System.Drawing.Size(31, 13);
-        self.label4.TabIndex := 12;
-        self.label4.Text := 'times';
-        // 
-        // numericUpDown1
-        // 
-        self.numericUpDown1.Location := new System.Drawing.Point(85, 19);
-        self.numericUpDown1.Maximum := new System.Decimal(new System.Int32[4](9, 0, 0, 0));
-        self.numericUpDown1.Minimum := new System.Decimal(new System.Int32[4](1, 0, 0, 0));
-        self.numericUpDown1.Name := 'numericUpDown1';
-        self.numericUpDown1.Size := new System.Drawing.Size(30, 20);
-        self.numericUpDown1.TabIndex := 10;
-        self.numericUpDown1.Value := new System.Decimal(new System.Int32[4](3, 0, 0, 0));
-        // 
         // Form1
         // 
         self.ClientSize := new System.Drawing.Size(384, 281);
-        self.Controls.Add(self.groupBox2);
         self.Controls.Add(self.button3);
         self.Controls.Add(self.groupBox1);
         self.Controls.Add(self.listBox1);
@@ -238,9 +160,6 @@ procedure InitializeComponent;
         self.menuStrip1.ResumeLayout(false);
         self.menuStrip1.PerformLayout();
         self.groupBox1.ResumeLayout(false);
-        self.groupBox2.ResumeLayout(false);
-        (System.ComponentModel.ISupportInitialize(self.numericUpDown2)).EndInit();
-        (System.ComponentModel.ISupportInitialize(self.numericUpDown1)).EndInit();
         self.ResumeLayout(false);
         self.PerformLayout();
     end;

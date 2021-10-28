@@ -8,7 +8,7 @@ type
   AboutForm = class(Form)
     procedure linkLabel1_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
   {$region FormDesigner}
-  private 
+  private
     {$resource About.AboutForm.resources}
     linkLabel1: LinkLabel;
     tabControl1: TabControl;

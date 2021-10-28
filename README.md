@@ -1,4 +1,4 @@
-![Screenshot_1](https://user-images.githubusercontent.com/81249219/139078314-1ac53f01-5950-4b79-8bff-d60dda1fe4e5.png)
+![Screenshot_1](https://user-images.githubusercontent.com/81249219/139251754-690cccef-7090-42af-a4ae-0cab7bcce9e1.png)
 # WaverPad
 A **simple** soundboard made in PascalABC.NET
 
