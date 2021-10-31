@@ -1,6 +1,6 @@
 # WaverPad - A simple soundboard made in PascalABC.NET
 
-WaverPad is a very lightweight soundboard program, made from scratch in PascalABC.NET by [Michael Agarkov](https://github.com/MichaelAgarkov).
+WaverPad is a very simple and lightweight soundboard program, made from scratch in PascalABC.NET by [Michael Agarkov](https://github.com/MichaelAgarkov).
 
 ![Screenshot_1](https://user-images.githubusercontent.com/81249219/139251754-690cccef-7090-42af-a4ae-0cab7bcce9e1.png)
 
